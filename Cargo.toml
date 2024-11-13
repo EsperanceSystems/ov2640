@@ -1,0 +1,14 @@
+[package]
+name = "ov2640"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+embedded-hal = { version = "1.0.0"}
+embedded-hal-async = { version = "1.0.0" }
+defmt = { version = "0.3", optional = true }
+
+
+[features]
+default = []
+defmt = ["embedded-hal/defmt-03", "embedded-hal-async/defmt-03", "dep:defmt"]
